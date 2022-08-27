@@ -108,3 +108,37 @@ const product = [
 
 const cheap = product.find(prodct => prodct.price < 40000);
 console.log(cheap)
+
+
+
+// 3. (optional): forEach, reduce (advanced)
+
+const friends = ['Tom Hanks', 'Tom Cruise', 'Tom Brady', 'TOM Solaiman'];
+
+friends.forEach(friend => {
+
+})
+
+
+const products1 = [
+    {id: 1, name: 'laptop', price: 45000},
+    {id: 1, name: 'mobile', price: 80000},
+    {id: 1, name: 'watch', price: 35000},
+    {id: 1, name: 'tablet', price: 23000},
+];
+
+products1.forEach(product => console.log(product));
+
+
+//---------------------------------------------
+
+// map, forEach, filter, find, reduce
+const numbers2 = [1, 2, 3, 4, 5];
+// .reduce (accumulatorFunction, initial value)
+// accumulatorFunction use two parameters 
+// const total = numbers.reduce( (previous, current) => previous + current , 0);
+const total = numbers2.reduce( (previous, current) => {
+    console.log(previous, current);
+    return previous + current
+} , 0);
+console.log(total);
