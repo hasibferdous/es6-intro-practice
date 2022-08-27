@@ -70,6 +70,36 @@ purpose:
 const result = getDoubles(number);
 console.log(result);
 console.log(makeDouble);
+
+
+
+//more map ......................
+
+const numbers3 = [12, 56, 87, 44];
+const half = numbers3.map( n => n/2 )
+const thirds = numbers3.map(x => x/3);
+// console.log(half);
+// console.log(thirds);
+
+const friends2 = ['Tom Hanks', 'Tom Cruise', 'Tom Brady', 'TOM Solaiman'];
+const firstLetters = friends2.map(friend => friend[0]);
+// console.log(firstLetters);
+const nameLengths = friends2.map(friend => friend.length);
+// console.log(nameLengths);
+
+const products2 = [
+    {id: 1, name: 'laptop', price: 45000},
+    {id: 1, name: 'mobile', price: 80000},
+    {id: 1, name: 'watch', price: 35000},
+    {id: 1, name: 'tablet', price: 23000},
+];
+
+// const items = products.map(product => console.log(product.name));
+const items = products2.map(product => product.name);
+const prices = products2.map(p => p.price);
+// console.log(items)
+console.log(prices);
+
 //---------------------------------------------
 const numbers = [12, 5, 23, 45, 11, 18, 9, 55, 61, 1];
 const bigNums = numbers.filter(number => number > 20);
@@ -142,3 +172,30 @@ const total = numbers2.reduce( (previous, current) => {
     return previous + current
 } , 0);
 console.log(total);
+
+
+// 4. class
+// syntactic sugar
+class Instructor{
+    name;
+    designation = 'Web Course Instructor'
+    team = 'web team'
+    location;
+    constructor(name, location){
+        this.name = name;
+        this.location = location;
+    }
+    startSupportSession(time){
+        console.log(`start the support session at ${time}`)
+    }
+    createQuiz(module){
+        console.log(`please create quiz for module ${module}`)
+    }
+}
+const aamir = new Instructor('aamir', 'mumbai')
+console.log(aamir);
+aamir.startSupportSession('9.00');
+aamir.createQuiz(60);
+
+const solaiman = new Instructor('Solaiman Khan', 'dhaka')
+console.log(solaiman);
