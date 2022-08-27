@@ -77,3 +77,19 @@ const max = (arr1, arr2) => {
     return Math.max(...newArr);
 }
 console.log(max(numSet1,numSet2));
+
+
+function min(nums) { 
+    return Math.min(nums) 
+    }
+    console.log(min( [1,3,2 ]))
+
+    const cube=x=> x*x*x; 
+console.log(cube(2))
+
+const [a, b] = [1,2,3,4,45,5]; 
+console.log(a+b);
+
+const nums = [1,2,3,4,5];
+let outputs = nums.filter(n => n%2);
+console.log(outputs);
